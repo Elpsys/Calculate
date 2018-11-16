@@ -10,13 +10,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculate/ViewController.swift"
-            timestampString = "563853170.1806771"
+            timestampString = "564066268.717266"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "add(_:)"
-            landmarkType = "7">
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculate.ViewController.Operator.getter : Swift.Int"
+                  moduleName = "Calculate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s20171103186/Desktop/Practice/Calculate/Calculate/ViewController.swift"
+                  timestampString = "564060522.290729"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculate.ViewController.Operator.setter : Swift.Int"
+                  moduleName = "Calculate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s20171103186/Desktop/Practice/Calculate/Calculate/ViewController.swift"
+                  timestampString = "564060522.293017"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculate.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Calculate.ViewController"
+                  moduleName = "Calculate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s20171103186/Desktop/Practice/Calculate/Calculate/ViewController.swift"
+                  timestampString = "564060522.294837"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "166">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculate.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Calculate.ViewController&gt;"
+                  moduleName = "Calculate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s20171103186/Desktop/Practice/Calculate/Calculate/ViewController.swift"
+                  timestampString = "564060522.296564"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "123">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
