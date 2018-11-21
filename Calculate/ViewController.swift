@@ -13,33 +13,22 @@ class ViewController: UIViewController {
 
     var temp:Double = 0
     var Operator:Int = 0
-    var temp1: Double = 0
-    var control = 0
+    var temp1:Double = 0
+    var control:Int = 0
     @IBOutlet weak var output: UITextField!
+    @IBAction func change(_ sender: UIButton) {
+        
+    }
     @IBAction func add(_ sender: UIButton) {
         if output.text == ""
         {
-            output.text = "0"
+            output.text = ""
         }
         else if output.text != "" && Operator == 1
         {
             temp = temp + Double(output.text!)!
             output.text = "\(temp)"
-        }
-        else if output.text != "" && Operator == 2
-        {
-            temp = temp - Double(output.text!)!
-            output.text = "\(temp)"
-        }
-        else if output.text != "" && Operator == 3
-        {
-            temp = temp * Double(output.text!)!
-            output.text = "\(temp)"
-        }
-        else if output.text != "" && Operator == 4
-        {
-            temp = temp / Double(output.text!)!
-            output.text = "\(temp)"
+            control = 2
         }
         else
         {
@@ -52,7 +41,13 @@ class ViewController: UIViewController {
     @IBAction func subtraction(_ sender: UIButton) {
         if output.text == ""
         {
-            output.text = "0"
+            output.text = ""
+        }
+        else if output.text != "" && Operator == 2
+        {
+            temp = temp - Double(output.text!)!
+            output.text = "\(temp)"
+            control = 2
         }
         else
         {
@@ -65,7 +60,13 @@ class ViewController: UIViewController {
     @IBAction func multip(_ sender: UIButton) {
         if output.text == ""
         {
-            output.text = "0"
+            output.text = ""
+        }
+        else if output.text != "" && Operator == 3
+        {
+            temp = temp * Double(output.text!)!
+            output.text = "\(temp)"
+            control = 2
         }
         else
         {
@@ -78,7 +79,13 @@ class ViewController: UIViewController {
     @IBAction func division(_ sender: UIButton) {
         if output.text == ""
         {
-            output.text = "0"
+            output.text = ""
+        }
+        else if output.text != "" && Operator == 4
+        {
+            temp = temp / Double(output.text!)!
+            output.text = "\(temp)"
+            control = 2
         }
         else
         {
@@ -89,7 +96,7 @@ class ViewController: UIViewController {
         temp1 = 0
     }
     @IBAction func clear(_ sender: UIButton) {
-        output.text = ""
+        output.text = "0"
         temp1 = 0
         Operator = 0
     }
@@ -115,12 +122,42 @@ class ViewController: UIViewController {
             output.text = "\(temp)"
         }
         temp1 = 0
+        control = 1
     }
     @IBAction func button(_ sender: UIButton){
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "1"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "1"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "1"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "1"
+            control = 0
+        }
+        else if output.text == "0" 
+        {
+            output.text = ""
+            output.text = output.text! + "1"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "1"
+            control = 0
         }
         else
         {
@@ -128,10 +165,39 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func button2(_ sender: UIButton) {
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "2"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "2"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "2"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "2"
+            control = 0
+        }
+        else if output.text == "0"
+        {
+            output.text = ""
+            output.text = output.text! + "2"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "2"
+            control = 0
         }
         else
         {
@@ -139,92 +205,332 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func button3(_ sender: UIButton) {
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "3"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "3"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "3"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "3"
+            control = 0
+        }
+        else if output.text == "0"
+        {
+            output.text = ""
+            output.text = output.text! + "3"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "3"
+            control = 0
         }
         else
         {
             output.text = output.text! + "3"
         }
+
     }
     @IBAction func button4(_ sender: UIButton) {
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "4"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "4"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "4"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "4"
+            control = 0
+        }
+        else if output.text == "0"
+        {
+            output.text = ""
+            output.text = output.text! + "4"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "4"
+            control = 0
         }
         else
         {
             output.text = output.text! + "4"
         }
+
     }
     @IBAction func button5(_ sender: UIButton) {
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "5"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "5"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "5"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "5"
+            control = 0
+        }
+        else if output.text == "0"
+        {
+            output.text = ""
+            output.text = output.text! + "5"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "5"
+            control = 0
         }
         else
         {
             output.text = output.text! + "5"
         }
+
     }
     @IBAction func button6(_ sender: UIButton) {
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "6"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "6"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "6"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "6"
+            control = 0
+        }
+        else if output.text == "0"
+        {
+            output.text = ""
+            output.text = output.text! + "6"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "6"
+            control = 0
         }
         else
         {
             output.text = output.text! + "6"
         }
+
     }
     @IBAction func button7(_ sender: UIButton) {
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "7"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "7"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "7"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "7"
+            control = 0
+        }
+        else if output.text == "0"
+        {
+            output.text = ""
+            output.text = output.text! + "7"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "7"
+            control = 0
         }
         else
         {
             output.text = output.text! + "7"
         }
+
     }
     @IBAction func button8(_ sender: UIButton) {
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "8"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "8"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "8"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "8"
+            control = 0
+        }
+        else if output.text == "0"
+        {
+            output.text = ""
+            output.text = output.text! + "8"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "8"
+            control = 0
         }
         else
         {
             output.text = output.text! + "8"
         }
+
     }
     @IBAction func button9(_ sender: Any) {
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "9"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "9"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "9"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "9"
+            control = 0
+        }
+        else if output.text == "0"
+        {
+            output.text = ""
+            output.text = output.text! + "9"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "9"
+            control = 0
         }
         else
         {
             output.text = output.text! + "9"
         }
+
     }
     @IBAction func button0(_ sender: UIButton) {
-        if output.text == "0"
+        if Operator == 1 && control != 1 && control != 0
         {
             output.text = ""
             output.text = output.text! + "0"
+            control = 0
+        }
+        else if Operator == 2 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "0"
+            control = 0
+        }
+        else if Operator == 3 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "0"
+            control = 0
+        }
+        else if Operator == 4 && control != 1 && control != 0
+        {
+            output.text = ""
+            output.text = output.text! + "0"
+            control = 0
+        }
+        else if output.text == "0"
+        {
+            output.text = ""
+            output.text = output.text! + "0"
+        }
+        else if control == 1
+        {
+            output.text = output.text! + "0"
+            control = 0
         }
         else
         {
             output.text = output.text! + "0"
         }
+
     }
  
     @IBAction func point(_ sender: UIButton) {
