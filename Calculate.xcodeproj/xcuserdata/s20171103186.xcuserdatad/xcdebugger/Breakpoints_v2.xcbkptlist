@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculate/ViewController.swift"
-            timestampString = "564458108.804381"
+            timestampString = "564671774.162981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -26,12 +26,12 @@
                   moduleName = "Calculate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/s20171103186/Desktop/Practice/Calculate/Calculate/ViewController.swift"
-                  timestampString = "564458174.660941"
+                  timestampString = "564665717.217344"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "102">
+                  offsetFromSymbolStart = "92">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +41,12 @@
                   moduleName = "Calculate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/s20171103186/Desktop/Practice/Calculate/Calculate/ViewController.swift"
-                  timestampString = "564458174.662627"
+                  timestampString = "564665717.219239"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "114">
+                  offsetFromSymbolStart = "104">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -56,12 +56,12 @@
                   moduleName = "Calculate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/s20171103186/Desktop/Practice/Calculate/Calculate/ViewController.swift"
-                  timestampString = "564458174.664353"
+                  timestampString = "564665717.220993"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "169">
+                  offsetFromSymbolStart = "156">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -71,12 +71,12 @@
                   moduleName = "Calculate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/s20171103186/Desktop/Practice/Calculate/Calculate/ViewController.swift"
-                  timestampString = "564458174.6659729"
+                  timestampString = "564665717.222658"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "138">
+                  offsetFromSymbolStart = "132">
                </Location>
             </Locations>
          </BreakpointContent>

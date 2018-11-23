@@ -14,11 +14,22 @@ class ViewController: UIViewController {
     var temp:Double = 0
     var Operator:Int = 0
     var temp1:Double = 0
+    var temp2:Double = 0
+    var changenumber:Double = 0
+    var temp4:Double = 0
     var control:Int = 0
+    var control1:Int = 0
+    var control2:Int = 0
     @IBOutlet weak var output: UITextField!
     @IBAction func change(_ sender: UIButton) {
-        
+        changenumber = -1 * Double(output.text!)!
+        output.text = "\(changenumber)"
     }
+    @IBAction func Percent(_ sender: UIButton) {
+        temp4 = Double(output.text!)! * 0.01
+        output.text = "\(temp4)"
+    }
+    
     @IBAction func add(_ sender: UIButton) {
         if output.text == ""
         {
@@ -122,7 +133,7 @@ class ViewController: UIViewController {
             output.text = "\(temp)"
         }
         temp1 = 0
-        control = 1
+        control1 = 1
     }
     @IBAction func button(_ sender: UIButton){
         if Operator == 1 && control != 1 && control != 0
@@ -158,6 +169,12 @@ class ViewController: UIViewController {
         {
             output.text = output.text! + "1"
             control = 0
+        }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "1"
+            control1 = 0
         }
         else
         {
@@ -199,6 +216,12 @@ class ViewController: UIViewController {
             output.text = output.text! + "2"
             control = 0
         }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "2"
+            control1 = 0
+        }
         else
         {
             output.text = output.text! + "2"
@@ -238,6 +261,12 @@ class ViewController: UIViewController {
         {
             output.text = output.text! + "3"
             control = 0
+        }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "3"
+            control1 = 0
         }
         else
         {
@@ -280,6 +309,12 @@ class ViewController: UIViewController {
             output.text = output.text! + "4"
             control = 0
         }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "4"
+            control1 = 0
+        }
         else
         {
             output.text = output.text! + "4"
@@ -320,6 +355,12 @@ class ViewController: UIViewController {
         {
             output.text = output.text! + "5"
             control = 0
+        }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "5"
+            control1 = 0
         }
         else
         {
@@ -362,6 +403,12 @@ class ViewController: UIViewController {
             output.text = output.text! + "6"
             control = 0
         }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "6"
+            control1 = 0
+        }
         else
         {
             output.text = output.text! + "6"
@@ -402,6 +449,12 @@ class ViewController: UIViewController {
         {
             output.text = output.text! + "7"
             control = 0
+        }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "7"
+            control1 = 0
         }
         else
         {
@@ -444,6 +497,12 @@ class ViewController: UIViewController {
             output.text = output.text! + "8"
             control = 0
         }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "8"
+            control1 = 0
+        }
         else
         {
             output.text = output.text! + "8"
@@ -485,6 +544,12 @@ class ViewController: UIViewController {
             output.text = output.text! + "9"
             control = 0
         }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "9"
+            control1 = 0
+        }
         else
         {
             output.text = output.text! + "9"
@@ -525,6 +590,12 @@ class ViewController: UIViewController {
         {
             output.text = output.text! + "0"
             control = 0
+        }
+        else if control1 == 1
+        {
+            output.text = ""
+            output.text = output.text! + "0"
+            control1 = 0
         }
         else
         {
