@@ -7,7 +7,14 @@
 //
 
 import UIKit
-
+protocol Stack {
+    associatedtype Element
+    var isEmpty:Bool {get}
+    var size:Int{get}
+    var peek:Element?{get}
+    mutating func push(_ newElement:Element)
+    mutating func pop()->Element?
+}
 class ViewController: UIViewController {
     
 
@@ -15,6 +22,7 @@ class ViewController: UIViewController {
     var Operator:Int = 0
     var temp1:Double = 0
     var temp2:Double = 0
+    var temp3:Int = 0
     var changenumber:Double = 0
     var temp4:Double = 0
     var control:Int = 0
@@ -41,6 +49,24 @@ class ViewController: UIViewController {
             output.text = "\(temp)"
             control = 2
         }
+        else if output.text != "" && Operator == 2
+        {
+            temp = temp - Double(output.text!)!
+            control = 2
+            Operator = 1
+        }
+        else if output.text != "" && Operator == 3
+        {
+            temp = temp * Double(output.text!)!
+            Operator = 1
+            control = 2
+        }
+        else if output.text != "" && Operator == 4
+        {
+            temp = temp / Double(output.text!)!
+            Operator = 1
+            control = 2
+        }
         else
         {
             temp = Double(output.text!)!
@@ -58,6 +84,24 @@ class ViewController: UIViewController {
         {
             temp = temp - Double(output.text!)!
             output.text = "\(temp)"
+            control = 2
+        }
+        else if output.text != "" && Operator == 1
+        {
+            temp = temp + Double(output.text!)!
+            control = 2
+            Operator = 2
+        }
+        else if output.text != "" && Operator == 3
+        {
+            temp = temp * Double(output.text!)!
+            Operator = 2
+            control = 2
+        }
+        else if output.text != "" && Operator == 4
+        {
+            temp = temp / Double(output.text!)!
+            Operator = 2
             control = 2
         }
         else
@@ -79,6 +123,28 @@ class ViewController: UIViewController {
             output.text = "\(temp)"
             control = 2
         }
+        else if output.text != "" && Operator == 4
+        {
+            temp = temp / Double(output.text!)!
+            control = 2
+            Operator = 3
+        }
+        else if output.text != "" && Operator == 1
+        {
+            temp3 = Operator
+            temp2 = temp
+            temp = Double(output.text!)!
+            control = 2
+            Operator = 3
+        }
+        else if output.text != "" && Operator == 2
+        {
+            temp3 = Operator
+            temp2 = temp
+            temp = Double(output.text!)!
+            control = 2
+            Operator = 3
+        }
         else
         {
             temp = Double(output.text!)!
@@ -97,6 +163,28 @@ class ViewController: UIViewController {
             temp = temp / Double(output.text!)!
             output.text = "\(temp)"
             control = 2
+        }
+        else if output.text != "" && Operator == 3
+        {
+            temp = temp * Double(output.text!)!
+            control = 2
+            Operator = 4
+        }
+        else if output.text != "" && Operator == 1
+        {
+            temp3 = Operator
+            temp2 = temp
+            temp = Double(output.text!)!
+            control = 2
+            Operator = 4
+        }
+        else if output.text != "" && Operator == 2
+        {
+            temp3 = Operator
+            temp2 = temp
+            temp = Double(output.text!)!
+            control = 2
+            Operator = 4
         }
         else
         {
@@ -124,16 +212,47 @@ class ViewController: UIViewController {
         }
         if Operator == 3
         {
-            temp = temp * Double(output.text!)!
-            output.text = "\(temp)"
+            if(temp3 == 1)
+            {
+                temp = temp * Double(output.text!)! + temp2
+                output.text = "\(temp)"
+            }
+            else if(temp3 == 2)
+            {
+                temp = temp2 - temp * Double(output.text!)!
+                output.text = "\(temp)"
+            }
+            else
+            {
+                temp = temp * Double(output.text!)!
+                output.text = "\(temp)"
+            }
+            temp2 = 0
+            temp3 = 0
         }
         if Operator == 4
         {
-            temp = temp / Double(output.text!)!
-            output.text = "\(temp)"
+            if(temp3 == 1)
+            {
+                temp = temp / Double(output.text!)! + temp2
+                output.text = "\(temp)"
+            }
+            else if(temp3 == 2)
+            {
+                temp = temp2 - temp / Double(output.text!)!
+                output.text = "\(temp)"
+            }
+            else
+            {
+                temp = temp / Double(output.text!)!
+                output.text = "\(temp)"
+            }
+            temp2 = 0
+            temp3 = 0
         }
         temp1 = 0
         control1 = 1
+        Operator = 0
     }
     @IBAction func button(_ sender: UIButton){
         if Operator == 1 && control != 1 && control != 0
