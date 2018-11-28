@@ -197,17 +197,21 @@ class ViewController: UIViewController {
         Operator = 0
     }
     @IBAction func equal(_ sender: UIButton) {
-        if Operator == 1
+        if output.text! == ""
+        {
+            output.text = "0"
+        }
+        else if Operator == 1
         {
             temp = temp + Double(output.text!)!
             output.text = "\(temp)"
         }
-        if Operator == 2
+        else if Operator == 2
         {
             temp = temp - Double(output.text!)!
             output.text = "\(temp)"
         }
-        if Operator == 3
+        else if Operator == 3
         {
             if(temp3 == 1)
             {
@@ -227,7 +231,7 @@ class ViewController: UIViewController {
             temp2 = 0
             temp3 = 0
         }
-        if Operator == 4
+        else if Operator == 4
         {
             if(temp3 == 1)
             {
