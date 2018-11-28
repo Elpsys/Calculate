@@ -7,14 +7,7 @@
 //
 
 import UIKit
-protocol Stack {
-    associatedtype Element
-    var isEmpty:Bool {get}
-    var size:Int{get}
-    var peek:Element?{get}
-    mutating func push(_ newElement:Element)
-    mutating func pop()->Element?
-}
+
 class ViewController: UIViewController {
     
 
@@ -42,6 +35,7 @@ class ViewController: UIViewController {
         if output.text == ""
         {
             output.text = ""
+            Operator = 1
         }
         else if output.text != "" && Operator == 1
         {
@@ -79,6 +73,7 @@ class ViewController: UIViewController {
         if output.text == ""
         {
             output.text = ""
+            Operator = 2
         }
         else if output.text != "" && Operator == 2
         {
@@ -116,6 +111,7 @@ class ViewController: UIViewController {
         if output.text == ""
         {
             output.text = ""
+            Operator = 3
         }
         else if output.text != "" && Operator == 3
         {
@@ -157,6 +153,7 @@ class ViewController: UIViewController {
         if output.text == ""
         {
             output.text = ""
+            Operator = 4
         }
         else if output.text != "" && Operator == 4
         {
