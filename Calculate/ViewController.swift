@@ -51,13 +51,35 @@ class ViewController: UIViewController {
         }
         else if output.text != "" && Operator == 3
         {
-            temp = temp * Double(output.text!)!
+            if(temp3 == 1)
+            {
+                temp = temp * Double(output.text!)! + temp2
+            }
+            else if(temp3 == 2)
+            {
+                temp = temp2 - temp * Double(output.text!)!
+            }
+            else
+            {
+                temp = temp * Double(output.text!)!
+            }
             Operator = 1
             control = 2
         }
         else if output.text != "" && Operator == 4
         {
-            temp = temp / Double(output.text!)!
+            if(temp3 == 1)
+            {
+                temp = temp / Double(output.text!)! + temp2
+            }
+            else if(temp3 == 2)
+            {
+                temp = temp2 - temp / Double(output.text!)!
+            }
+            else
+            {
+                temp = temp / Double(output.text!)!
+            }
             Operator = 1
             control = 2
         }
@@ -66,6 +88,7 @@ class ViewController: UIViewController {
             temp = Double(output.text!)!
             output.text = ""
             Operator = 1
+            temp3 = 1
         }
         temp1 = 0
     }
@@ -89,13 +112,35 @@ class ViewController: UIViewController {
         }
         else if output.text != "" && Operator == 3
         {
-            temp = temp * Double(output.text!)!
+            if(temp3 == 1)
+            {
+                temp = temp * Double(output.text!)! + temp2
+            }
+            else if(temp3 == 2)
+            {
+                temp = temp2 - temp * Double(output.text!)!
+            }
+            else
+            {
+                temp = temp * Double(output.text!)!
+            }
             Operator = 2
             control = 2
         }
         else if output.text != "" && Operator == 4
         {
-            temp = temp / Double(output.text!)!
+            if(temp3 == 1)
+            {
+                temp = temp / Double(output.text!)! + temp2
+            }
+            else if(temp3 == 2)
+            {
+                temp = temp2 - temp / Double(output.text!)!
+            }
+            else
+            {
+                temp = temp / Double(output.text!)!
+            }
             Operator = 2
             control = 2
         }
